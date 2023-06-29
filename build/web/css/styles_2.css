@@ -1,0 +1,202 @@
+/*eliminamos margenes y relleno*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*ajustes para el body*/
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+  min-height: 100%;
+}
+
+/*cambia color al pasar el mouse*/
+nav a:hover{
+    color: blue;
+}
+
+/*saca la linea abajo del link y pone color blanco a todos los link*/
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*ajustes para el contenedor principal*/
+.grid-container > * {
+  padding: 10px;
+  
+}
+
+/*ajustes para el header*/
+.header {
+  grid-area: header;
+  background-color: #1f53c5;/*#1f53c5;/*#85aedd;*/
+  text-align: center;
+}
+
+/*ajustes para el navbar*/
+.navbar {
+  grid-area: navbar;
+  background-color: grey;
+  text-align: left;
+}
+
+
+/*ajustes para el sidebar*/
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+}
+
+/*ajustes para el main*/
+.main {
+  grid-area: main;
+  background-color: white;
+  height: 100%;
+  text-align: center;
+}
+
+/*ajustes para el footer*/
+.footer {
+  grid-area: footer;
+  background-color: #736357;
+  color: white;
+}
+
+/*ajustes para visualizar en dispositivos tipo celular con grid*/
+.grid-container {
+  display: grid;
+  grid-template:
+    "header"  auto
+    "navbar"  auto
+    "main"    auto
+    "sidebar" auto
+    "footer"  auto;
+}
+
+/*ajustes para visualizar en dispositivos tipo tablet con media query*/
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template:
+      "header  header" 150px
+      "navbar  navbar" auto
+      "main sidebar"   auto
+      "footer  footer" auto /
+      auto     200px;
+  }
+}
+
+/*ajustes para visualizar en dispositivos tipo pc con media query*/
+@media (min-width: 900px) {
+  .grid-container {
+     
+    grid-template:
+      "header  header header"  150px
+      "navbar  main   sidebar" auto
+      "footer  footer footer"  auto /
+      200px    auto   200px;
+  }
+}
+
+/*de aqui hasta el final son estilos de parrafos imagenes titulos de contenedores
+que estan dentro del contenedor Main*/
+.contenedor{
+    padding: 15px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.parrafos{
+    width: 650px;
+    text-align: left;
+    padding: 20px;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-align: justify;
+}
+
+.imagenes{
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.titulos{
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 20px;
+}
+
+.imaSombra{
+    box-shadow: 7px 13px 37px #000;
+}
+
+p{
+    padding: 5px;
+}
+
+.contenedorf{
+    padding: 15px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'calibri';
+    font-size: 20px;
+    text-align: center;
+}
+
+.parra{
+    text-align: left;
+    font-family: 'calibri';
+    font-size: 15px;
+}
+
+.hiperv{
+    text-decoration: none;
+    color: #1f53c5;
+    font-style: oblique;
+}
+
+.f1{
+   width: 400px;
+   
+   padding: 10px;
+}
+
+.f2{
+    width: 400px;
+    
+    padding: 10px;
+}
+
+.f3{
+    width: 400px;
+    
+    padding: 10px;
+}
+
+.publicaciones{
+    padding: 20px;
+}
+
+.enu{
+    box-shadow: 4px 5px 15px #000;
+    background: lightblue;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid #1f53c5;
+    border-left: 3px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 20px;
+}
